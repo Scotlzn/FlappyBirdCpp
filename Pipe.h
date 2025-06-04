@@ -8,7 +8,9 @@ class Pipe {
 
         float speed = 100.0f;
         int width = 32;
-        int hole_offset = 64;
+        int hole_offset = 128;
+
+        bool passed_through = false;
 
         int top_rectangle[2];
         int bottom_rectangle[2];

@@ -7,10 +7,11 @@ Pipe::Pipe(Vector2 Aposition, std::mt19937& gen) {
 
     // Generating random numbers (gen is the engine used to generate them)
     std::uniform_int_distribution<> midpointDist(225 - hole_offset, 225 + hole_offset);
-    std::uniform_int_distribution<> sizeDist(60, 120); // Size each side
+    std::uniform_int_distribution<> sizeDist(50, 100); // Size each side
     int midpoint = midpointDist(gen);
     int size = sizeDist(gen);
 
+    // Calculate both rectangles needed for the pipe and save (y, height) into int arrays
     int hole[2] = {
         midpoint - size,
         midpoint + size
